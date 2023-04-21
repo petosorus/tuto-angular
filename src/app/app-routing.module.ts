@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { Beer1Component } from './beer1/beer1.component';
 import { Beer3Component } from './beer3/beer3.component';
 import { Beer2Component } from './beer2/beer2.component';
+import { RandomBeerResolver } from './resolver/random-beer.resolver';
 
 const routes: Routes = [
   {
@@ -15,12 +16,11 @@ const routes: Routes = [
     component: Beer1Component
   },
   {
-    path: '2',
-    component: Beer2Component
-  },
-  {
     path: '3',
-    component: Beer3Component
+    component: Beer3Component,
+    resolve: {
+      beers: RandomBeerResolver
+    }
   }
 ];
 

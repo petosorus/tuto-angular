@@ -1,1 +1,10 @@
-<p>beer3 works!</p>
+<p>Ici c'est un exemple qui marche si tu as besoin d'inspi</p>
+<p>Clique sur un ingrédient pour voir une sélection, clique sur la sélection pour la reset</p>
+
+<p *ngIf="selected" (click)="resetSelected()">{{ selected.name }}</p>
+
+<ingredients3
+    [malts]="beer.ingredients.malt"
+    [hops]="beer.ingredients.hops"
+    (selected)="onSelected($event)"
+></ingredients3>
