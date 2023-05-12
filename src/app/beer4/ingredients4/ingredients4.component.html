@@ -1,0 +1,13 @@
+<ol>
+    <li *ngFor="let malt of malts" (click)="onClick(malt)">
+        <span>{{ malt.name }}</span>
+        <span>{{ malt.amount.value }} {{ malt.amount.unit }}</span>
+    </li>
+</ol>
+
+<ul>
+    <li *ngFor="let hop of hops" (click)="onClick(hop)">
+        <span>{{ hop.name}}</span>
+        <span>{{ hop.amount.value }} {{ hop.amount.unit }}</span>
+    </li>
+</ul>

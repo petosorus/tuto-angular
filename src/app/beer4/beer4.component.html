@@ -1,0 +1,15 @@
+<p>Ici c'est un exemple qui marche si tu as besoin d'inspi</p>
+<p>Clique sur un ingrédient pour voir une sélection, clique sur la sélection pour la reset</p>
+
+
+
+<ingredients4
+    [malts]="beer.ingredients.malt"
+    [hops]="beer.ingredients.hops"
+></ingredients4>
+
+<p *ngIf="selected" (click)="resetSelected()">Sélection de beer4 {{ selected.name }}</p>
+
+<selected-uppercase></selected-uppercase>
+
+<selected-limit></selected-limit>

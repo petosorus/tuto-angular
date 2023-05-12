@@ -5,6 +5,7 @@ import { Beer1Component } from './beer1/beer1.component';
 import { Beer3Component } from './beer3/beer3.component';
 import { Beer2Component } from './beer2/beer2.component';
 import { RandomBeerResolver } from './resolver/random-beer.resolver';
+import { Beer4Component } from './beer4/beer4.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,13 @@ const routes: Routes = [
   {
     path: '3',
     component: Beer3Component,
+    resolve: {
+      beers: RandomBeerResolver
+    }
+  },
+  {
+    path: '4',
+    component: Beer4Component,
     resolve: {
       beers: RandomBeerResolver
     }
